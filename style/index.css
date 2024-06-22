@@ -1,0 +1,79 @@
+@import url("./common.css");
+
+h1 {
+  font-size: 2.2rem;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid white;
+  animation: blink 0.5s infinite;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: lowercase;
+}
+
+li::after {
+  content: "　·　";
+}
+
+li:last-child::after {
+  content: "";
+}
+
+h2 {
+  margin-top: 1.3rem;
+  font-size: 0.8rem;
+  font-family: Courier, monospace;
+  color: #aaa;
+}
+
+h2::before {
+  content: "/* ";
+}
+
+h2::after {
+  content: " */";
+}
+
+@keyframes blink {
+  0% {
+    color: #15ff00;
+  }
+  50% {
+    color: #ea00ff;
+  }
+  100% {
+    color: #15ff00;
+  }
+}
+
+html,
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header img:nth-child(2) {
+  margin: 0 0.3rem;
+  filter: brightness(0) invert(1);
+}
+
+body > img {
+  margin: 4rem 0 2rem 0;
+}
